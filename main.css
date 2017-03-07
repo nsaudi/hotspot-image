@@ -1,0 +1,336 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* Start your base/mobile styles here */
+
+
+/*changes font of text*/
+
+html, body {
+    font-size: 16px;
+    font-family: 'PT Serif', serif;
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+}
+
+.main-text, h1 {
+    margin: 10px;
+    padding: 5px;
+    font-size: 1.3em;
+}
+
+.main-text {
+    font-family: 'PT Serif', serif;
+}
+
+h1, h3 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+h3 {
+    margin-left: 15px;
+}
+
+
+/*making space between paragraphs*/
+
+p {
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/*styling link color for byline*/
+
+a {
+    text-decoration: none;
+    color: #009973;
+}
+
+
+/*styles the caption*/
+
+.caption {
+    color: #666;
+    font-size: 0.9em;
+    margin-left: 10px;
+    font-family: 'PT Serif', serif;
+}
+
+.credit {
+    font-weight: 400;
+}
+
+
+/*styles the circle*/
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    background-color: white;
+    border: solid #009973;
+    opacity: .60;
+    z-index: 3;
+    display: block;
+}
+
+
+/*circle on the migrant picture*/
+
+#circle_migrant {
+    position: absolute;
+    top: 20%;
+    /* Must be in percentage or will move on different devices*/
+    left: 83%;
+    /* Must be in percentage or will move on different devices*/
+    -webkit-transition: opacity 5s ease-in;
+    -moz-transition: opacity 5s ease-in;
+    -o-transition: opacity 5s ease-in;
+    transition: opacity 5s ease-in;
+}
+
+
+/*circle on the calendar*/
+
+#circle_calendar {
+    position: absolute;
+    top: 25%;
+    /* Must be in percentage or will move on different devices*/
+    left: 35%;
+    /* Must be in percentage or will move on different devices*/
+}
+
+
+/*circle on news article*/
+
+#circle_deport {
+    position: absolute;
+    top: 54%;
+    /* Must be in percentage or will move on different devices*/
+    left: 53%;
+    /* Must be in percentage or will move on different devices*/
+}
+
+
+/*circle on picture of members*/
+
+#circle_centro {
+    position: absolute;
+    top: 85%;
+    /* Must be in percentage or will move on different devices*/
+    left: 53%;
+    /* Must be in percentage or will move on different devices*/
+}
+
+
+/*circle on family picture*/
+
+#circle_family {
+    position: absolute;
+    top: 69%;
+    /* Must be in percentage or will move on different devices*/
+    left: 33%;
+    /* Must be in percentage or will move on different devices*/
+}
+
+
+/*circle on chair*/
+
+#circle_chair {
+    /*background-color: purple;*/
+    position: absolute;
+    top: 60%;
+    /* Must be in percentage or will move on different devices*/
+    left: 19%;
+    /* Must be in percentage or will move on different devices*/
+    -webkit-transition: opacity 5s ease-in;
+    -moz-transition: opacity 5s ease-in;
+    -o-transition: opacity 5s ease-in;
+    transition: opacity 5s ease-in;
+}
+
+
+/*circle on worker, Nico*/
+
+#circle_nico {
+    position: absolute;
+    top: 55%;
+    /* Must be in percentage or will move on different devices*/
+    left: 57%;
+    /* Must be in percentage or will move on different devices*/
+}
+
+
+/*circle on hiring ad*/
+
+#circle_poster {
+    position: absolute;
+    top: 18%;
+    /* Must be in percentage or will move on different devices*/
+    left: 78%;
+    /* Must be in percentage or will move on different devices*/
+}
+
+
+/*change size of headline*/
+
+h1 {
+    padding-bottom: 10px;
+    font-size: 2em;
+}
+
+
+/*positions photos for mobile to be entire screen*/
+
+.photo-container {
+    width: 100%;
+    position: relative;
+    /*z-index: 1;*/
+}
+
+
+/*styles the popup*/
+
+.info_slides {
+    width: 100%;
+    background-color: rgba(179, 255, 236, .65);
+    /* this light blue, but with a translucent background */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    z-index: 0;
+    /* While dial the z-index down because even if an element doesn't have opacity it still has 'mass'. The info window would get in the way of clicking on the circles without this */
+    transition: opacity .5s ease-in-out;
+    /* this gives us the fade in and fade out effect but only on the opacity element. You cannot use the display property with transitions. */
+}
+
+
+/*how the pop up looks when active*/
+
+.info_slides.active {
+    z-index: 4;
+    /* We give the info_slides a higher z-index on active */
+    opacity: 1;
+}
+
+
+/*styles the text of the popup*/
+
+.info_popIn {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 70px 15px 30px 15px;
+    font-size: 1em;
+    text-align: center;
+    color: #000;
+    height: 100%;
+}
+
+
+/*styles the X close button*/
+
+.btn_close {
+    position: absolute;
+    font-family: sans-serif;
+    top: 5%;
+    left: 92%;
+    font-size: 2em;
+    color: white;
+    z-index: 4;
+    font-weight: 900;
+}
+
+img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* Tablet/Desktop overrides */
+
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here. Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+}
+
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
+    .circle:hover {
+        background-color: #009973;
+    }
+    #popIn {
+        font-size: 5em;
+        padding: 200px 15px 30px 15px;
+    }
+    .btn_close {
+        font-size: 2em;
+    }
+    .btn_close:hover {
+        color: #009973;
+    }
+    /*add a container to style for desktop so the photo isn't huge*/
+    .container {
+        max-width: 968px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+
+}
+
+}
+
+}
+
+}
