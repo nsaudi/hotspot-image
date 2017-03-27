@@ -55,7 +55,7 @@ table {
 /*changes font of text*/
 
 html, body {
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'PT Serif', serif;
     /* Sets default font-size to 16px, ensuring 1em = 16px; */
 }
@@ -63,7 +63,6 @@ html, body {
 .main-text, h1 {
     margin: 10px;
     padding: 5px;
-    font-size: 1.3em;
 }
 
 .main-text {
@@ -72,6 +71,7 @@ html, body {
 
 h1, h3 {
     font-family: 'Quicksand', sans-serif;
+    line-height: 1.3;
 }
 
 h3 {
@@ -85,6 +85,8 @@ p {
     margin-bottom: 15px;
     margin-left: 10px;
     margin-right: 10px;
+    line-height: 1.5;
+    font-size: 1.2em;
 }
 
 
@@ -242,6 +244,7 @@ h1 {
 
 .info_slides {
     width: 100%;
+    height: 100%;
     background-color: rgba(179, 255, 236, .65);
     /* this light blue, but with a translucent background */
     position: absolute;
@@ -270,8 +273,9 @@ h1 {
     position: absolute;
     top: 0px;
     left: 0px;
-    padding: 70px 15px 30px 15px;
+    padding: 40px 15px 25px 15px;
     font-size: 1em;
+    line-height: 1.5;
     text-align: center;
     color: #000;
     height: 100%;
@@ -311,6 +315,11 @@ img {
     #popIn {
         font-size: 5em;
         padding: 200px 15px 30px 15px;
+    }
+    .info_popIn {
+        font-size: 1.8em;
+        line-height: 1.5;
+        margin-top: 90px;
     }
     .btn_close {
         font-size: 2em;
